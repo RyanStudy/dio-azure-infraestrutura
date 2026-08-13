@@ -41,6 +41,18 @@ Criação da tabela `Produtos`, inserção do registro apontando para a URL do B
 
 ---
 
+## 💻 Aplicação de Cadastro de Produtos (Streamlit + Python)
+
+Para demonstrar a integração dos serviços de nuvem com uma aplicação real, foi desenvolvido um painel em Python utilizando **Streamlit**, **Azure Blob Storage** e **Azure SQL Database**.
+
+### 🛠️ Estrutura e Arquivos da Aplicação
+* `main.py`: Código-fonte da interface e lógica de integração com os serviços Azure.
+* `.env`: Variáveis de ambiente configuradas para segurança de credenciais.
+* `requirements.txt`: Dependências do projeto (`streamlit`, `azure-storage-blob`, `pymssql`, `python-dotenv`).
+
+### 🖼️ Interface da Aplicação
+![Cadastro de Produtos](./Cadastro%20de%20Produtos.png)
+
 ## 🛠️ Script SQL Utilizado
 
 ```sql
@@ -57,7 +69,7 @@ VALUES (
     'Headset Logitech', 
     'Headset sem fio de alta qualidade', 
     250.00, 
-    '[https://stazuredio01ryan.blob.core.windows.net/produtos-imagens/shopping.webp](https://stazuredio01ryan.blob.core.windows.net/produtos-imagens/shopping.webp)'
+    'https://stazuredio01ryan.blob.core.windows.net/produtos-imagens/shopping.webp'
 );
 
 SELECT * FROM Produtos;
